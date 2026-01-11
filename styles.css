@@ -12,7 +12,13 @@ html, body {
 body {
   margin: 0 auto;
   min-height: 100dvh;
-  background-image: url(assets/background.avif);
+  background-image: url(assets/background.png);
+
+  background-image: image-set(
+    url("assets/background.avif") type("image/avif"),
+    url("assets/background.webp") type("image/webp")
+  );
+  
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -75,7 +81,12 @@ body {
 
 @media (max-width: 780px) {
   body {
-    background-image: url(assets/background-m.avif);
+    background-image: url(assets/background-m.png);
+
+    background-image: image-set(
+      url("assets/background-m.avif") type("image/avif"),
+      url("assets/background-m.webp") type("image/webp")
+    );
   }
 
   .container {
